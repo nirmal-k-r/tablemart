@@ -1,0 +1,42 @@
+<%- include('../partials/header.ejs') %>
+
+<section>
+    <br><br>
+    <div class="container text-center">
+        <h3>Register</h3>
+    </div>
+    <br><br>
+    <div class="container">
+        <form action="/authentication/register" method="POST">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">Username</span>
+              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="username">
+            </div>
+            
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Password</span>
+                <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" name="password">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Full Name</span>
+                <input type="text" class="form-control" placeholder="fullName" aria-label="fullName" aria-describedby="basic-addon1" name="fullName">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Address</span>
+                <input type="text" class="form-control" placeholder="address" aria-label="address" aria-describedby="basic-addon1" name="address">
+            </div>
+            <div class="float-end">
+                <button type="submit" class="btn btn-success">Register account</button>
+                <a class="btn btn-secondary" href="/authentication/">Login</a>
+            </div>
+           
+        
+        </form> 
+    </div>
+
+   
+</section>
+
+<%- include('../partials/footer.ejs') %>

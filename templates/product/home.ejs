@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<%- include('../partials/header.ejs') %>
+
+          <section>
+            <div class="container">
+                <br>
+                <h1>Product page</h1>
+                <br>
+                <div class="row">
+                    <% products.forEach(product => { %>
+                        
+                        <div class="col-sm-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="<%- product.imgUrl %>" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                   
+                                    <div class="text-center">
+                                        <h5 class="card-title"><%-product.name%></h5>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item bold">Price: <%-product.price%></li>
+                                            <li class="list-group-item">Stock: <%-product.stock%></li>
+                                            <li class="list-group-item">Category: <%-product.category%></li>
+                                        </ul>
+                                        <br>
+                                        <a type="button" class="btn btn-primary" href="/order/cart/add/<%-product.id %>">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+
+                    <% }); %>
+                </div>
+            </div>
+           
+
+          </section>
+        
+
+<%- include('../partials/footer.ejs') %>

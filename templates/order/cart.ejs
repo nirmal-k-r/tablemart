@@ -1,0 +1,35 @@
+<%- include('../partials/header.ejs') %>
+
+<section>
+    <br><br>
+    <div class="container">
+        <h3 class="text-center">Cart</h3>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% var id=0; %>
+              <% cart.forEach(product => { %>
+                <tr>
+                  <th scope="row"><%- id %></th>
+                  <td><%- product.name %></td>
+                  <td><%- product.price %></td>
+                  <td> <a class="btn btn-danger" href="/order/cart/delete/<%-product.id %>">Delete</a></td>
+                </tr>
+              <% id++; }); %>
+              
+            </tbody>
+          </table>
+
+          <h4 class="float-end">Total: <%-totalPrice %></h4>
+
+    </div>
+</section>
+
+<%- include('../partials/footer.ejs') %>

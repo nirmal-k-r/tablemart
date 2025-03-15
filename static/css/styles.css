@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(243, 243, 243);
+}
+
+.margin-left{
+    margin-left: 20px;
+}
+
+.footer{
+    background-color: rgb(230, 230, 230);
+    padding:10px;
+}
