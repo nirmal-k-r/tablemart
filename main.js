@@ -65,7 +65,7 @@ app.use((err, req, res, next) => {
 });
 
 //start server
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 10000;
 app.listen('0.0.0.0',port,function(){ //to set open ip addres
     console.log(`Server is listening on port ${port}`);
 });
